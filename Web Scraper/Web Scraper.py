@@ -4,7 +4,7 @@ from bs4 import BeautifulSoup
 from urllib.request import unquote
 
 # target URL
-url = 'https://dyysg.org.uk/docs.php'
+url = 'https://www.nar.realtor/sites/default/files/documents/2021-home-buyers-and-sellers-generational-trends-03-16-2021.pdf'
 
 # make HTTP GET request to the target URL
 print('HTTP GET: %s', url)
@@ -28,7 +28,7 @@ for url in all_urls:
             
             # append base URL if no 'https' available in URL
             if 'https' not in url['href']:
-                pdf_url = 'https://dyysg.org.uk' + url['href']
+                pdf_url = 'https://www.nar.realtor/sites/default/files/documents/2021-home-buyers-and-sellers-generational-trends-03-16-2021.pdf' + url['href']
 
             # otherwise use bare URL
             else:
